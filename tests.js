@@ -11,5 +11,5 @@ Tinytest.add('meteor-stacktrace', function (test) {
 
   test.isTrue(_.isArray(StackTrace.printStackTrace()));
 
-  test.isTrue(StackTrace.getCurrentLocation());
+  test.isTrue(StackTrace.getCaller());
 });

@@ -1,6 +1,6 @@
 StackTrace = {
   printStackTrace: printStackTrace,
-  getCurrentLocation: function (skip) {
+  getCaller: function (skip) {
     skip = skip || 2;
     var lines = printStackTrace();
     var i = 0;
