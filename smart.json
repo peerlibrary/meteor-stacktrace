@@ -1,0 +1,8 @@
+{
+  "name": "stacktrace",
+  "description": "Meteor package for getting stack traces in all web browsers and server",
+  "homepage": "https://github.com/peerlibrary/meteor-stacktrace",
+  "author": "The PeerLibrary Project",
+  "version": "0.1.0",
+  "git": "https://github.com/peerlibrary/meteor-stacktrace.git"
+}
