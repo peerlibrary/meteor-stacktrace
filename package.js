@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "Meteor package for getting stack traces in all web browsers and server"
+  summary: "Meteor package for getting uniform stack traces in all web browsers and server"
 });
 
 Package.on_use(function (api) {
