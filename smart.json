@@ -3,6 +3,6 @@
   "description": "Meteor package for getting uniform stack traces in all web browsers and server",
   "homepage": "https://github.com/peerlibrary/meteor-stacktrace",
   "author": "The PeerLibrary Project",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "git": "https://github.com/peerlibrary/meteor-stacktrace.git"
 }
