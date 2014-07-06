@@ -1,4 +1,4 @@
-Tinytest.add('meteor-stacktrace', function (test) {
+Tinytest.add('stacktrace', function (test) {
   var isDefined = false;
   try {
     StackTrace;
