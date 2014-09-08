@@ -7,7 +7,7 @@ Tinytest.add('stacktrace', function (test) {
   catch (e) {
   }
   test.isTrue(isDefined, "StackTrace is not defined");
-  test.isTrue(Package.stacktrace.StackTrace, "Package.stacktrace.StackTrace is not defined");
+  test.isTrue(Package['peerlibrary:stacktrace'].StackTrace, "Package.peerlibrary:stacktrace.StackTrace is not defined");
 
   test.isTrue(_.isArray(StackTrace.printStackTrace()));
 
