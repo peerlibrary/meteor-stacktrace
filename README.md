@@ -16,5 +16,5 @@ Installation
 ------------
 
 ```
-mrt add stacktrace
+meteor add peerlibrary:stacktrace
 ```
