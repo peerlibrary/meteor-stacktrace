@@ -12,6 +12,6 @@ StackTrace.getCaller = function (skip, options) {
         }
       }
     }
-    return stackframes[i].functionName || '<unknown>';
+    return stackframes[i] || '<unknown>';
   });
 };

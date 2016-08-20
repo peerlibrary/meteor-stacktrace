@@ -23,7 +23,7 @@ Tinytest.addAsync('stacktrace - stackframes', function (test, onComplete) {
 Tinytest.addAsync('stacktrace - get caller', function callerNameTest(test, onComplete) {
   StackTrace.getCaller().then(function (caller) {
     test.isTrue(caller);
-    test.include(caller, 'callerNameTest');
+    test.include(caller.functionName, 'callerNameTest');
     onComplete();
   }).catch(function (error) {
     test.fail(error);
