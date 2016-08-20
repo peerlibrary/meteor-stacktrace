@@ -1,21 +1,45 @@
 Package.describe({
-  summary: "Meteor package for getting uniform stack traces in all web browsers and server",
-  version: '0.2.0',
   name: 'peerlibrary:stacktrace',
+  summary: "Meteor package for getting uniform stack traces in all web browsers and server",
+  version: '1.3.1_1',
   git: 'https://github.com/peerlibrary/meteor-stacktrace.git'
 });
 
-Package.on_use(function (api) {
-  api.versionsFrom('METEOR@1.0.2.1');
+Npm.depends({
+  'stacktrace-js': '1.3.1'
+});
+
+Package.onUse(function (api) {
+  api.versionsFrom('METEOR@1.4.0.1');
+
+  // Core dependencies.
+  api.use([
+    'modules'
+  ]);
+
   api.export('StackTrace');
 
-  api.add_files([
-    'stacktrace/stacktrace.js',
-    'export-stacktrace.js'
-  ], ['client', 'server']);
+  api.addFiles([
+    'stacktrace.js'
+  ]);
 });
 
 Package.on_test(function (api) {
-  api.use(['peerlibrary:stacktrace', 'tinytest', 'test-helpers', 'underscore'], ['client', 'server']);
-  api.add_files('tests.js', ['client', 'server']);
+  api.versionsFrom('METEOR@1.4.0.1');
+
+  // Core dependencies.
+  api.use([
+    'tinytest',
+    'test-helpers',
+    'underscore'
+  ]);
+
+  // Internal dependencies.
+  api.use([
+    'peerlibrary:stacktrace',
+  ]);
+
+  api.addFiles([
+    'tests.js'
+  ]);
 });

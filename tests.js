@@ -1,4 +1,4 @@
-Tinytest.add('stacktrace', function (test) {
+Tinytest.add('stacktrace - definition', function (test) {
   var isDefined = false;
   try {
     StackTrace;
@@ -8,8 +8,25 @@ Tinytest.add('stacktrace', function (test) {
   }
   test.isTrue(isDefined, "StackTrace is not defined");
   test.isTrue(Package['peerlibrary:stacktrace'].StackTrace, "Package.peerlibrary:stacktrace.StackTrace is not defined");
+});
 
-  test.isTrue(_.isArray(StackTrace.printStackTrace()));
+Tinytest.addAsync('stacktrace - stackframes', function (test, onComplete) {
+  StackTrace.get().then(function (stackframes) {
+    test.isTrue(_.isArray(stackframes));
+    onComplete();
+  }).catch(function (error) {
+    test.fail(error);
+    onComplete();
+  });
+});
 
-  test.isTrue(StackTrace.getCaller());
+Tinytest.addAsync('stacktrace - get caller', function callerNameTest(test, onComplete) {
+  StackTrace.getCaller().then(function (caller) {
+    test.isTrue(caller);
+    test.include(caller, 'callerNameTest');
+    onComplete();
+  }).catch(function (error) {
+    test.fail(error);
+    onComplete();
+  });
 });
