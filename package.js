@@ -1,7 +1,7 @@
 Package.describe({
   name: 'peerlibrary:stacktrace',
   summary: "Meteor package for getting uniform stack traces in all web browsers and server",
-  version: '1.3.1_1',
+  version: '1.3.1_2',
   git: 'https://github.com/peerlibrary/meteor-stacktrace.git'
 });
 
