@@ -14,7 +14,8 @@ Package.onUse(function (api) {
 
   // Core dependencies.
   api.use([
-    'modules'
+    'modules',
+    'promise'
   ]);
 
   api.export('StackTrace');
